@@ -1,0 +1,25 @@
+/* GLOBAL */
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+/* APPLICATION */
+
+.application {
+  width: 100%;
+  height: 80px;
+  border-bottom: solid thin black;
+}
+
+/* CHAMPION */
+
+.champ-name{
+  width: 120px;
+  text-align: center;
+}
+
+.champ-img img{
+  display: block;
+  margin: 0 auto;
+}

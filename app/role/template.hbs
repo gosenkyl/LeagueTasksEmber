@@ -1,0 +1,27 @@
+<div class="uppercase">
+    to select a champion, simply click and drag it to the selected region
+</div>
+
+<div style="width: 100%;">
+  <div style="width: 50%; float: left;">
+
+      <span>SELECTED</span>
+
+    {{#each model.selected as |champion|}}
+
+      {{champion-card content=champion}}
+
+    {{/each}}
+  </div>
+
+  <div style="width: 50%; float: left; overflow: scroll; height: 1000px;">
+
+      <span>AVAILABLE</span>
+
+    {{#each model.available as |champion|}}
+
+      {{champion-card content=champion}}
+
+    {{/each}}
+  </div>
+</div>
