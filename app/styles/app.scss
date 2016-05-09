@@ -23,3 +23,18 @@
   display: block;
   margin: 0 auto;
 }
+
+/* ROLE */
+.side-nav{
+  width: 15%;
+  float: left;
+
+  li{
+    list-style-type: none;
+  }
+}
+
+.main-content{
+  width: 85%;
+  float: left;
+}

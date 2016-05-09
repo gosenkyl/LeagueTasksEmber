@@ -1,27 +1,57 @@
-<div class="uppercase">
-    to select a champion, simply click and drag it to the selected region
+<div class="side-nav">
+
+    <ul>
+        <li>
+            <span>TOP</span>
+        </li>
+        <li>
+            <span>MID</span>
+        </li>
+        <li>
+            <span>JUNGLE</span>
+        </li>
+        <li>
+            <span>ADC</span>
+        </li>
+        <li>
+            <span>SUPPORT</span>
+        </li>
+    </ul>
+
 </div>
 
-<div style="width: 100%;">
-  <div style="width: 50%; float: left;">
+<div class="main-content">
 
-      <span>SELECTED</span>
-
-    {{#each model.selected as |champion|}}
-
-      {{champion-card content=champion}}
-
-    {{/each}}
+  <div class="uppercase">
+      to select a champion, simply click and drag it to the selected region
   </div>
 
-  <div style="width: 50%; float: left; overflow: scroll; height: 1000px;">
+  <div style="width: 100%;">
+    <div style="width: 50%; float: left;">
 
-      <span>AVAILABLE</span>
+        <span>SELECTED</span>
 
-    {{#each model.available as |champion|}}
+      {{#each model.selected as |champion|}}
 
-      {{champion-card content=champion}}
+        {{champion-card content=champion columns=12}}
 
-    {{/each}}
+      {{/each}}
+    </div>
+
+    <div style="width: 50%; float: left; overflow: scroll; height: 1000px;">
+
+        <span>AVAILABLE</span>
+
+        <div class="row">
+          {{#each model.available as |champion|}}
+
+
+            {{champion-card content=champion columns=3}}
+
+          {{/each}}
+        </div>
+
+    </div>
   </div>
+
 </div>

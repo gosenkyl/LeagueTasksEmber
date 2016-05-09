@@ -7,7 +7,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('champion');
-  this.route('role',{ path: 'role/:roleId' });
+  this.route('role', { path: 'role/:roleId' });
 });
 
 export default Router;

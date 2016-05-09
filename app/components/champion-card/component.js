@@ -6,6 +6,8 @@ export default Ember.Component.extend({
 
   isDragable: true,
 
+  columns: null,
+
   dragStart: function(event){
     event.dataTransfer.setData('text/data', this.get('content.id'));
   },
