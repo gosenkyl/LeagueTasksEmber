@@ -2,9 +2,10 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
 
-  key: DS.attr('string'),
-  name: DS.attr('string'),
-  title: DS.attr('string'),
-  image: DS.attr('string')
+  champion: DS.belongsTo('champion'),
+  userId: DS.attr(),
+  roleId: DS.attr(),
+
+  selected: DS.attr("boolean")
 
 });

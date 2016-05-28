@@ -1,7 +1,7 @@
 <div class="side-nav">
 
     <ul>
-        <li>
+        <li class="selected">
             <span>TOP</span>
         </li>
         <li>
@@ -27,31 +27,23 @@
   </div>
 
   <div style="width: 100%;">
-    <div style="width: 50%; float: left;">
 
-        <span>SELECTED</span>
+    {{drop-zone id="selected-champs" dropped="drop"}}
 
-      {{#each model.selected as |champion|}}
+    <div style="width: 50%; float: left; overflow: scroll; height: 100vh;">
 
-        {{champion-card content=champion columns=12}}
-
-      {{/each}}
-    </div>
-
-    <div style="width: 50%; float: left; overflow: scroll; height: 1000px;">
-
-        <span>AVAILABLE</span>
+        <div style="text-align: center;">AVAILABLE</div>
 
         <div class="row">
-          {{#each model.available as |champion|}}
+          {{#each availableChamps as |userChampion|}}
 
-
-            {{champion-card content=champion columns=3}}
+            {{champion-card content=userChampion.champion columns=3}}
 
           {{/each}}
         </div>
 
     </div>
+
   </div>
 
 </div>

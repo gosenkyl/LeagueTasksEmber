@@ -28,13 +28,37 @@
 .side-nav{
   width: 15%;
   float: left;
+  border-right: solid thin darkgray;
+
+  height: 100vh;
+
+  ul{
+    padding: 0;
+    width: 100%;
+  }
 
   li{
+    padding: 25px 0;
     list-style-type: none;
+    text-align: center;
   }
+}
+
+.selected{
+  font-weight: 800;
 }
 
 .main-content{
   width: 85%;
   float: left;
+}
+
+.drop-zone{
+  width: 50%;
+  float: left;
+  height: 100vh;
+}
+
+.dragClass{
+  background-color: darkgray;
 }
